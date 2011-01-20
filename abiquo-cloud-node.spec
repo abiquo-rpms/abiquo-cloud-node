@@ -1,7 +1,7 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-cloud-node
-Version:  1.6
+Version:  1.7
 Release:  1
 Summary:  Abiquo Cloud Node setup package
 Group:    Development/System 
@@ -46,11 +46,16 @@ cat > /etc/sysconfig/libvirtd <<EOF
 LIBVIRTD_ARGS="--listen"
 EOF
 
-
+if [ -z "`grep 'options loop max_loop' /etc/modprobe.conf`" ]; then
+  echo "options loop max_loop=128" >> /etc/modprobe.conf
+fi
 
 %files
 %defattr(-,root,root,-)
 
 %changelog
+* Thu Jan 20 2011 Sergio Rubio <srubio@abiquo.com> 1.7-1
+- Updated for 1.7
+
 * Mon Oct 25 2010 Sergio Rubio srubio@abiquo.com 1.6-1
 - Initial Release
