@@ -1,7 +1,7 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-cloud-node
-Version:  1.7.5
+Version:  1.8
 Release:  1%{dist}%{buildstamp} 
 Summary:  Abiquo Cloud Node setup package
 Group:    Development/System 
@@ -54,6 +54,9 @@ fi
 %defattr(-,root,root,-)
 
 %changelog
+* Wed May 25 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1%{buildstamp}
+- updated to 1.8
+
 * Thu Mar 17 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-1
 - version bump
 
