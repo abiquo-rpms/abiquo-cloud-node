@@ -1,1 +1,0 @@
-require 'rake/rpm-utils'

@@ -1,15 +1,15 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-cloud-node
-Version:  1.8
-Release:  1%{dist}%{buildstamp} 
+Version:  2.0
+Release:  1%{?dist}
 Summary:  Abiquo Cloud Node setup package
 Group:    Development/System 
 License:  Multiple 
 URL:      http://www.abiquo.com 
 #Source0:  README
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-Requires: libvirt
+Requires: libvirt abiquo-aim
 BuildArch: noarch
 
 %description
@@ -54,7 +54,16 @@ fi
 %defattr(-,root,root,-)
 
 %changelog
-* Wed May 25 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1%{buildstamp}
+* Mon Dec 19 2011 Sergio Rubio <srubio@abiquo.com> - 2.0-1
+- bumped version to 2.0
+
+* Tue Sep 27 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-3
+- Add abiquo-aim dep
+
+* Wed Jun 01 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-2
+- remove buildstamp from release
+
+* Wed May 25 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1
 - updated to 1.8
 
 * Thu Mar 17 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.5-1
