@@ -56,11 +56,7 @@ fi
 %changelog
 * Mon Dec 19 2011 Sergio Rubio <srubio@abiquo.com> - 2.0-1
 - bumped version to 2.0
-
-* Tue Sep 27 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-3
 - Add abiquo-aim dep
-
-* Wed Jun 01 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-2
 - remove buildstamp from release
 
 * Wed May 25 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1
